@@ -8,9 +8,6 @@
 #' @examples
 #' docker_init()
 
-
-library('shiny')
-
 my_ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
@@ -31,5 +28,6 @@ my_server <- function(input, output){
 }
 
 run <- function(){
+  library('shiny')
   shinyApp(ui = my_ui, server = my_server)
 }
